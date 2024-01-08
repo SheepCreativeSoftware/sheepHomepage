@@ -11,6 +11,12 @@
 	<link href="../style/styles.css" rel="stylesheet">
 	<link rel="icon" href="../images/SheepLogoV4GrauTransparent.png" type="image/png">
 	<link rel="icon" href="../images/SheepLogoV4GrauTransparent.svg" type="image/png">
+<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const copyright = document.getElementById('copyright')
+			copyright.innerText = copyright.innerText.replace('Copyright 2023', 'Copyright 2023-'+new Date().getFullYear());
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -22,6 +28,7 @@
 			<a href="https://plesk.sheepcs.de:8443">Login</a>
 		</div>
 	</header>
+<div id="main">
 	<figure>
 		<img src="../images/martin-bisof-xsIOCYmlI1g-unsplash-cropped.png">
 		<figcaption>Foto von <a href="https://unsplash.com/de/@mbisof?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Bisof</a> auf <a href="https://unsplash.com/de/fotos/schafherde-auf-wiese-xsIOCYmlI1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
@@ -54,8 +61,9 @@
 			If the content on this site was not created by the operator, the copyrights of third parties are respected. In particular contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, we ask that you notify us accordingly. If we become aware of any legal violations, we will immediately remove such content.
 		</p>
 	</main>
+</div>
 	<footer>
-		<p>&copy; Copyright 2024 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
+		<p id="copyright">&copy; Copyright 2023 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
 		<ul>
 			<li><a href="../index.html">Deutsch</a></li>
 			<li><a href="imprint.html">Imprint</a></li>

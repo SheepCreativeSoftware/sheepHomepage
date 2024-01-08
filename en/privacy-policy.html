@@ -11,23 +11,30 @@
 	<link href="../style/styles.css" rel="stylesheet">
 	<link rel="icon" href="../images/SheepLogoV4GrauTransparent.png" type="image/png">
 	<link rel="icon" href="../images/SheepLogoV4GrauTransparent.svg" type="image/png">
+<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const copyright = document.getElementById('copyright')
+			copyright.innerText = copyright.innerText.replace('Copyright 2023', 'Copyright 2023-'+new Date().getFullYear());
+		});
+	</script>
 </head>
 <body>
 	<header>
 		<div id="logo">
 			<a href="https://sheepcs.de"><img src="../images/SheepLogoV4GrauTransparent.svg" alt="Logo"></a>
 		</div>
-		<div id="header-text">Sheep CS</div>
+		<div id="header-text"><h1>Sheep CS</h1></div>
 		<div id="login">
 			<a href="https://plesk.sheepcs.de:8443">Login</a>
 		</div>
 	</header>
+<div id="main">
 	<figure>
 		<img src="../images/martin-bisof-xsIOCYmlI1g-unsplash-cropped.png">
 		<figcaption>Foto von <a href="https://unsplash.com/de/@mbisof?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Bisof</a> auf <a href="https://unsplash.com/de/fotos/schafherde-auf-wiese-xsIOCYmlI1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
 	</figure>
 	<main>
-		<h1>Data protection</h1>
+		<h1>Privacy Policy</h1>
 <h2>Basics</h2>
 <p>This data protection declaration is intended to inform visitors to this website about the type, scope and purpose of the collection and use of personal data by the website operator.</p>
 <p>The website operator and therefore the body responsible for data processing on this website is:</p>
@@ -106,8 +113,9 @@ This data protection declaration was created using a template provided by <a hre
 
 Last updated: January 2, 2023
 	</main>
+</div>
 	<footer>
-		<p>&copy; Copyright 2024 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
+		<p id="copyright">&copy; Copyright 2023 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
 		<ul>
 			<li><a href="../index.html">Deutsch</a></li>
 			<li><a href="imprint.html">Imprint</a></li>

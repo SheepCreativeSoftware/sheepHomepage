@@ -9,6 +9,12 @@
 	<link href="/error_docs/styles.css" rel="stylesheet">
 	<link rel="icon" href="/error_docs/SheepLogoV4GrauTransparent.png" type="image/png">
 	<link rel="icon" href="/error_docs/SheepLogoV4GrauTransparent.svg" type="image/png">
+<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const copyright = document.getElementById('copyright')
+			copyright.innerText = copyright.innerText.replace('Copyright 2023', 'Copyright 2023-'+new Date().getFullYear());
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -20,6 +26,7 @@
 			<a href="https://plesk.sheepcs.de:8443">Login</a>
 		</div>
 	</header>
+<div id="main">
 	<figure>
 		<img src="/error_docs/martin-bisof-xsIOCYmlI1g-unsplash-cropped.png">
 		<figcaption>Foto von <a href="https://unsplash.com/de/@mbisof?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Bisof</a> auf <a href="https://unsplash.com/de/fotos/schafherde-auf-wiese-xsIOCYmlI1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
@@ -36,12 +43,13 @@
 			<a href="/">Home Page</a>
 		</div>
 	</main>
+</div>
 	<footer>
-		<p>&copy; Copyright 2024 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
+		<p id="copyright">&copy; Copyright 2023 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
 		<ul>
-			<li><a href="https:/sheepcs.de/index.html">Deutsch</a></li>
-			<li><a href="https:/sheepcs.de/en/imprint.html">Imprint</a></li>
-			<li><a href="https:/sheepcs.de/en/privacy-policy.html">Private Policy</a></li>
+			<li><a href="https://sheepcs.de/index.html">Deutsch</a></li>
+			<li><a href="https://sheepcs.de/en/imprint.html">Imprint</a></li>
+			<li><a href="https://sheepcs.de/en/privacy-policy.html">Private Policy</a></li>
 			&nbsp;
 		</ul>
 	</footer>

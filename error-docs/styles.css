@@ -4,6 +4,7 @@ html, body {
 	margin: 0 0 0 0;
 	background-color: #333;
 	color: #fff;
+	overflow: hidden;
 }
 
 a,
@@ -14,10 +15,11 @@ a:link {
 }
 
 header {
-	width: auto;
+	width: 100%;
 	height: 80px;
 	display: block;
-	position: relative;
+	position: absolute;
+	top: 0;
 	background-color: #FF1A75;
 	color: #ffffff;
 }
@@ -45,8 +47,11 @@ div#header-text {
 	display: inline-block;
 	height: 80px;
 	font-size: 45px;
-    margin: 3px 0 0px 15px;
+    margin-left: 15px;
     font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 80px;
 }
 
 div#login {
@@ -55,7 +60,7 @@ div#login {
 	float: inline-end;
 	border-radius: 5px;
 	background-color: #fff;
-	margin: 24px 10px 24px 10px;
+	margin: 21px 10px 21px 10px;
 	padding: 5px 8px 6px 8px;
 }
 
@@ -65,7 +70,25 @@ div#login>a:hover,
 div#login>a:link {
 	color: #000;
 	text-decoration: none;
+	font-size: 20px;
 }
+
+div#login:hover {
+	background-color: #ddd;
+}
+
+div#login:active {
+	border: 1px solid #111314;
+}
+
+div#main {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	overflow-y: auto;
+	height: calc(100% - 80px - 150px);
+}
+
 
 figure>img {
 	object-fit: cover;
@@ -87,10 +110,11 @@ main {
 }
 
 footer {
-	width: auto;
+	width: 100%;
 	height: fit-content;
 	display: block;
-	position: relative;
+	position: absolute;
+	bottom: 0;
 	background-color: #FF1A75;
 	color: #ffffff;
 	padding: 5px 0px 0px 0px;
@@ -116,4 +140,16 @@ footer>ul {
     margin: 0;
     padding: 15px 0px 20px 20px;
     width: calc(100% - 20px);
+}
+
+@media only screen and (max-width: 606px) {
+	div#main {
+		height: calc(100% - 80px - 170px);
+	}
+}
+
+@media only screen and (max-width: 379px) {
+	div#logo {
+		display: none;
+	}
 }
