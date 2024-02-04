@@ -4,54 +4,78 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Server Error of Sheep CS">
+	<meta name="keywords" content="Sheep CS, Server Error">
+	<meta name="author" content="Marina Egner">
 
-	<title>Sheep CS - Error 406</title>
+	<title>Sheep CS - Server Error</title>
 	<link href="/error_docs/styles.css" rel="stylesheet">
 	<link rel="icon" href="/error_docs/SheepLogoV4GrauTransparent.png" type="image/png">
 	<link rel="icon" href="/error_docs/SheepLogoV4GrauTransparent.svg" type="image/png">
-<script>
+	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			const copyright = document.getElementById('copyright')
-			copyright.innerText = copyright.innerText.replace('Copyright 2023', 'Copyright 2023-'+new Date().getFullYear());
+			copyright.innerText = copyright.innerText.replace('2023', '2023-'+new Date().getFullYear());
+		
+			const navBarElement = document.getElementById('nav-bar');
+			window.addEventListener('scroll', function() {
+				if(window.scrollY > 70) navBarElement.classList.add('nav-on-scroll');
+				else navBarElement.classList.remove('nav-on-scroll');
+			});
 		});
 	</script>
 </head>
 <body>
-	<header>
-		<div id="logo">
-			<a href="https://sheepcs.de"><img src="/error_docs/SheepLogoV4GrauTransparent.svg" alt="Logo"></a>
+	<div class="header-container not-start">
+		<header id="nav-bar" class="not-start">
+			<div class="logo-container">
+				<a class="logo-link" href="https://sheepcs.de"><img class="logo" src="/error_docs/SheepLogoV4GrauTransparent.svg" alt="Sheep CS Logo"></a>
+				<h1 class="logo-text">Sheep CS</h1>
+			</div>
+			<nav >
+				<a class="nav-link" href="https://blog.en.sheepcs.de/about">About</a>
+				<a class="nav-link" href="https://blog.en.sheepcs.de/">Blog</a>
+				<a class="nav-link" href="https://github.com/magraina">GitHub</a>
+				<a class="nav-link" href="https://sheepcs.de/en/imprint.html">Imprint</a>
+				<a class="default-btn white-btn" href="mailto:hello@sheepcs.de">Contact</a>
+			</nav>
+		</header>
+	</div>
+
+	<div id="main">
+		<main class="not-start">
+			<h2>Server Error</h2>
+			<h3>406 Not Acceptable</h3>
+			<p class="lead">Client browser does not accept the MIME type of the requested page.</p>
+			<hr/>
+			<p>That's what you can do</p>
+			<div class="help-actions">
+			<a href="javascript:location.reload();">Reload Page</a><br>
+			<a href="javascript:history.back();">Back to Previous Page</a><br>
+			<a href="/">Home Page</a>
 		</div>
-		<div id="header-text">Sheep CS</div>
-		<div id="login">
-			<a href="https://plesk.sheepcs.de:8443">Login</a>
-		</div>
-	</header>
-<div id="main">
-	<figure>
-		<img src="/error_docs/martin-bisof-xsIOCYmlI1g-unsplash-cropped.png">
-		<figcaption>Foto von <a href="https://unsplash.com/de/@mbisof?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Bisof</a> auf <a href="https://unsplash.com/de/fotos/schafherde-auf-wiese-xsIOCYmlI1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
-	</figure>
-	<main>
-		<h1>Server Error</h1>
-		<h2>406 Not Acceptable</h2>
-		<p class="lead">Client browser does not accept the MIME type of the requested page.</p>
-		<hr/>
-		<p>That's what you can do</p>
-		<div class="help-actions">
-		<a href="javascript:location.reload();">Reload Page</a><br>
-		<a href="javascript:history.back();">Back to Previous Page</a><br>
-		<a href="/">Home Page</a>
-    </div>
-	</main>
-</div>
+		</main>
+	</div>
+			
 	<footer>
-		<p id="copyright">&copy; Copyright 2023 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
-		<ul>
-			<li><a href="https://sheepcs.de/index.html">Deutsch</a></li>
-			<li><a href="https://sheepcs.de/en/imprint.html">Imprint</a></li>
-			<li><a href="https://sheepcs.de/en/privacy-policy.html">Private Policy</a></li>
-			&nbsp;
-		</ul>
+		<nav>
+			<span id="copyright">Sheep CS &copy; 2023</span>
+			<ul>
+				<li><a href="https://sheepcs.de/">German</a></li>
+				<li><a href="https://sheepcs.de/en/imprint.html">Server Error</a></li>
+				<li><a href="https://sheepcs.de/en/privacy-policy.html">Privacy Policy</a></li>
+			</ul>
+			<span id="copyright">Created by M.Egner</span>
+		</nav>
+		<div class="logo-conatiner">
+			<a class="logo-link" href="https://sheepcs.de"><img class="logo" src="/error_docs/SheepLogoV4GrauTransparent.svg" alt="Sheep CS Logo"></a>
+			<div class="social-container">
+				<a href="https://www.instagram.com/magraina/" target="_blank"><img class="social-logo" src="/error_docs/Instagram.svg" alt="Instagram Logo"></a>
+				<a href="https://www.linkedin.com/in/marina-egner-93193818a" target="_blank"><img class="social-logo" src="/error_docs/LinkedIn.png" alt="LinkedIn Logo"></a>
+				<a href="https://www.facebook.com/marina.egner.9/" target="_blank"><img class="social-logo" src="/error_docs/Facebook.png" alt="Facebook Logo"></a>
+			</div>
+			<a class="default-btn accent-btn" href="https://plesk.sheepcs.de:8443">Login</a>
+		</div>
 	</footer>
 </body>
 </html>

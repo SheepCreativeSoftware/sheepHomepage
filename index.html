@@ -6,58 +6,118 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Website von Sheep CS">
 	<meta name="keywords" content="Sheep CS">
+	<meta name="author" content="Marina Egner">
 
 	<title>Sheep CS - Home</title>
 	<link href="style/styles.css" rel="stylesheet">
 	<link rel="icon" href="images/SheepLogoV4GrauTransparent.png" type="image/png">
 	<link rel="icon" href="images/SheepLogoV4GrauTransparent.svg" type="image/png">
-<script>
+	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			const copyright = document.getElementById('copyright')
-			copyright.innerText = copyright.innerText.replace('Copyright 2023', 'Copyright 2023-'+new Date().getFullYear());
+			copyright.innerText = copyright.innerText.replace('2023', '2023-'+new Date().getFullYear());
+		
+			const navBarElement = document.getElementById('nav-bar');
+			window.addEventListener('scroll', function() {
+				if(window.scrollY > 70) navBarElement.classList.add('nav-on-scroll');
+				else navBarElement.classList.remove('nav-on-scroll');
+			});
 		});
 	</script>
 </head>
 <body>
-	<header>
-		<div id="logo">
-			<a href="https://sheepcs.de"><img src="images/SheepLogoV4GrauTransparent.svg" alt="Logo"></a>
+	<div class="header-container">
+		<header id="nav-bar" class="">
+			<div class="logo-container">
+				<a class="logo-link" href="https://sheepcs.de"><img class="logo" src="images/SheepLogoV4GrauTransparent.svg" alt="Sheep CS Logo"></a>
+				<h1 class="logo-text">Sheep CS</h1>
+			</div>
+			<nav >
+				<a class="nav-link" href="https://blog.sheepcs.de/about">Über</a>
+				<a class="nav-link" href="https://blog.sheepcs.de/">Blog</a>
+				<a class="nav-link" href="https://github.com/magraina">GitHub</a>
+				<a class="nav-link" href="impressum.html">Impressum</a>
+				<a class="default-btn white-btn" href="mailto:hello@sheepcs.de">Kontakt</a>
+			</nav>
+		</header>
+		<div class="headline">
+			<h1 class="headline-title">Sheep CS</h1>
+			<span class="headline-quote">"It is not knowledge, but the act of learning, not possession but the act of getting there, which generates the greatest satisfaction" <br> - C.F. Gauss</span>
 		</div>
-		<div id="header-text">Sheep CS</div>
-		<div id="login">
-			<a href="https://plesk.sheepcs.de:8443">Login</a>
-		</div>
-	</header>
-	<div id="main">
-		<figure>
-			<img src="images/martin-bisof-xsIOCYmlI1g-unsplash-cropped.png">
-			<figcaption>Foto von <a href="https://unsplash.com/de/@mbisof?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Bisof</a> auf <a href="https://unsplash.com/de/fotos/schafherde-auf-wiese-xsIOCYmlI1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
-		</figure>
-		<main>
-			
-			<div>It is not knowledge, but the act of learning, <br>
-				not possession but the act of getting there, <br>
-				which generates the greatest satisfaction <br>
-				- <strong>C.F. Gauss</strong></div>
-			<h3>Herzlich Willkommen! Wie kann ich dir weiterhelfen?</h3>
-			<p>Sheep Creative Studios das bin ich - Marina Egner <br>
-				Unter dem pseudonym Sheep Creative Studios, betreibe ich einen Webspace, programmiere diverse Software und betreibe einen Blog</p>
-				<ul>
-					<!--<li><a href="https://marina-egner.sheepcs.de/">Über mich</a></li>-->
-					<li><a href="https://blog.sheepcs.de/">Zum Blog in Deutsch</a></li>
-					<li><a href="https://blog.en.sheepcs.de/">Zum Blog in English</a></li>
-					<li><a href="https://github.com/SheepCreativeSoftware">Sheep CS auf GitHub</a></li>
-				</ul>
-		</main>
 	</div>
+
+	<main>
+		<article>
+			<div class="text-container">
+				<h3>Herzlich Willkommen auf meiner Site!</h3>
+				<span>Sheep Creative Studios das bin ich - Marina Egner</span>
+				<span>Unter dem pseudonym Sheep Creative Studios, betreibe ich einen Webspace, programmiere diverse Software und betreibe einen Blog.</span>
+				<span>Nachfolgend findest du weiterführende Links</span>
+				<div class="button-container">
+					<a class="default-btn white-btn" href="https://blog.sheepcs.de/about">Über mich</a>
+					<a class="default-btn border-btn disabled" href="https://marina-egner.sheepcs.de">Mein Portfolio</a>
+				</div>
+			</div>
+			<figure class="image-container">
+				<img src="images/martin-bisof-xsIOCYmlI1g-unsplash.jpg" alt="Schafe auf der Weide">
+				<figcaption>Foto von <a href="https://unsplash.com/de/@mbisof?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martin Bisof</a> auf <a href="https://unsplash.com/de/fotos/schafherde-auf-wiese-xsIOCYmlI1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
+			</figure>
+		</article>
+
+		<article>
+			<div class="text-container">
+				<h3>Mein persönlicher Blog</h3>
+				<span>Auf meinem Blog dreht es sich um allerlei Dinge rund um mein Leben.</span>
+				<span>Ich liebe es neue Orte zu entdecken - gehe gerne auf Reisen und entdecke Teile dieser Welt. Abseits davon dreht es sich rund um das Thema Problemlösung und Programmieren.</span>
+				<span>Schau gerne vorbei!</span>
+				<div class="button-container">
+					<a class="default-btn white-btn" href="https://blog.sheepcs.de">Zum Blog</a>
+					<a class="default-btn border-btn" href="https://blog.en.sheepcs.de">Blog in Englisch</a>
+				</div>
+			</div>
+			<figure class="image-container">
+				<img src="images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" alt="Jemand schreibt an einem Laptop">
+				<figcaption>Foto von <a href="https://unsplash.com/de/@glenncarstenspeters?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Glenn Carstens-Peters</a> auf <a href="https://unsplash.com/de/fotos/person-die-das-macbook-pro-verwendet-npxXWgQ33ZQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
+			</figure>
+		</article>
+
+		<article>
+			<div class="text-container">
+				<h3>Meine Coding-Projekte</h3>
+				<span>Ich beschäftige liebend gerne mit der Entwicklung von diversen Software-Tools.</span>
+				<span>Das reicht von Projekten in C/C++ in Verbindung mit Arduino & Co - Über kleinere NPM-Module für Node.js - Bis hin zu Front- und Backend-Web-Anwendungen.</span>
+				<span>Nachfolgend findest du meine Code-Repositories.</span>
+				<div class="button-container">
+					<a class="default-btn white-btn" href="https://github.com/magraina">GitHub Profil</a>
+					<a class="default-btn border-btn" href="https://github.com/SheepCreativeSoftware">GitHub Repos</a>
+				</div>
+			</div>
+			<figure class="image-container">
+				<img src="images/arnold-francisca-f77Bh3inUpE-unsplash.jpg" alt="Code-Editor auf einem Laptop">
+				<figcaption>Foto von <a href="https://unsplash.com/de/@clark_fransa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Arnold Francisca</a> auf <a href="https://unsplash.com/de/@clark_fransa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
+			</figure>
+		</article>
+	</main>
+	
 	<footer>
-		<p id="copyright">&copy; Copyright 2023 - Sheep Creative Studios. All rights reserved. Created by M.Egner</p>
-		<ul>
-			<li><a href="en/index.html">English</a></li>
-			<li><a href="impressum.html">Impressum</a></li>
-			<li><a href="datenschutz.html">Datenschutz</a></li>
-			&nbsp;
-		</ul>
+		<nav>
+			<span id="copyright">Sheep CS &copy; 2023</span>
+			<ul>
+				<li><a href="en/index.html">English</a></li>
+				<li><a href="impressum.html">Impressum</a></li>
+				<li><a href="datenschutz.html">Datenschutz</a></li>
+			</ul>
+			<span id="copyright">Created by M.Egner</span>
+		</nav>
+		<div class="logo-conatiner">
+			<a class="logo-link" href="https://sheepcs.de"><img class="logo" src="images/SheepLogoV4GrauTransparent.svg" alt="Sheep CS Logo"></a>
+			<div class="social-container">
+				<a href="https://www.instagram.com/magraina/" target="_blank"><img class="social-logo" src="images/Instagram.svg" alt="Instagram Logo"></a>
+				<a href="https://www.linkedin.com/in/marina-egner-93193818a" target="_blank"><img class="social-logo" src="images/LinkedIn.png" alt="LinkedIn Logo"></a>
+				<a href="https://www.facebook.com/marina.egner.9/" target="_blank"><img class="social-logo" src="images/Facebook.png" alt="Facebook Logo"></a>
+			</div>
+			<a class="default-btn accent-btn" href="https://plesk.sheepcs.de:8443">Login</a>
+		</div>
 	</footer>
 </body>
 </html>
