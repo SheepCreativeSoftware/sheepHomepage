@@ -29,6 +29,7 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	min-height: 100vh;
 	overflow-y: auto;
 }
@@ -206,6 +207,9 @@ main {
 
 main.not-start {
 	gap: 16px;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: auto;
 }
 
 main article {
@@ -455,6 +459,17 @@ footer .logo {
 	.headline-quote {
 		font-size: 18px;
 		width: 90vw;
+	}
+	.logo-text {
+		font-size: 32px;
+	}
+	.logo {
+		width: 50px;
+		height: 50px;
+	}
+	header.nav-on-scroll,
+	header.not-start {
+		height: 60px;
 	}
 }
 
