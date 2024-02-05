@@ -427,6 +427,11 @@ footer .logo {
 	}
 }
 
+
+/************************************************
+ * Responsive on mobile
+ ************************************************/
+
 @media (max-width: 648px) {
 	.nav-link {
 		display: none;
@@ -478,4 +483,3 @@ footer .logo {
 		display: none;
 	}
 }
-
