@@ -22,6 +22,14 @@
 				if(window.scrollY > 70) navBarElement.classList.add('nav-on-scroll');
 				else navBarElement.classList.remove('nav-on-scroll');
 			});
+
+			
+			const menuButtonElement = document.getElementById('hamburger-link');
+			const menuBarElement = document.getElementById('main-nav');
+			menuButtonElement.addEventListener('click', (_event) => {
+				menuButtonElement.classList.toggle('active');
+				menuBarElement.classList.toggle('active');
+			});
 		});
 	</script>
 </head>
@@ -32,13 +40,14 @@
 				<a class="logo-link" href="https://sheepcs.de"><img class="logo" src="/error_docs/SheepLogoV4GrauTransparent.svg" alt="Sheep CS Logo"></a>
 				<h1 class="logo-text">Sheep CS</h1>
 			</div>
-			<nav >
+			<nav id="main-nav">
 				<a class="nav-link" href="https://blog.en.sheepcs.de/about">About</a>
 				<a class="nav-link" href="https://blog.en.sheepcs.de/">Blog</a>
 				<a class="nav-link" href="https://github.com/magraina">GitHub</a>
 				<a class="nav-link" href="https://sheepcs.de/en/imprint.html">Imprint</a>
 				<a class="default-btn white-btn" href="mailto:hello@sheepcs.de">Contact</a>
 			</nav>
+			<a id="hamburger-link" href="javascript:void(0);"><img id="hamburger-logo" src="images/hamburger.svg"></a>
 		</header>
 	</div>
 
