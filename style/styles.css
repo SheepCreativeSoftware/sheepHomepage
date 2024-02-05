@@ -158,7 +158,7 @@ header.not-start {
 }
 
 .logo-text {
-	font-size: 44px;
+	font-size: 26px;
 	display: none;
 }
 
@@ -420,6 +420,14 @@ footer .logo {
 		justify-content: center;
 		background-color: var(--accent-color);
 	}
+	.logo {
+		width: 50px;
+		height: 50px;
+	}
+	header.nav-on-scroll,
+	header.not-start {
+		height: 60px;
+	}
 }
 
 @media (max-width: 800px) {
@@ -486,16 +494,8 @@ footer .logo {
 		font-size: 18px;
 		width: 90vw;
 	}
-	.logo-text {
-		font-size: 32px;
-	}
-	.logo {
-		width: 50px;
-		height: 50px;
-	}
-	header.nav-on-scroll,
-	header.not-start {
-		height: 60px;
+	header nav {
+		font-size: 20px;
 	}
 }
 
