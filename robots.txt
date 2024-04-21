@@ -1,2 +1,2 @@
-# robots.txt file of https://sheepcs.de/
-sitemap: https://sheepcs.de/sitemap.xml
+# robots.txt file of https://plesk.sheepcs.de/
+sitemap: https://plesk.sheepcs.de/sitemap.xml
